@@ -19,7 +19,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        self.contatos = [[NSMutableArray alloc] init];
     }
     return self;
 }
@@ -50,7 +50,10 @@
     contato.nome = self.nome.text;
     contato.email = self.email.text;
     //NSLog(@"Contato adicionado: %@", (NSString*)[contato objectForKey: @"nome"]);
-    NSLog(@"Contato adicionado: %@", contato.description);    
+    
+    
+    [self.contatos addObject:contato];
+    NSLog(@"Contatos Array: %@", self.contatos);
 }
 
 - (IBAction)proximoCampo:(UITextField*)campoAtual {

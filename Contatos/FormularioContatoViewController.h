@@ -14,6 +14,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *email;
 @property (weak, nonatomic) IBOutlet UITextField *telefone;
 @property (weak, nonatomic) IBOutlet UITextField *nome;
+
+@property (strong, atomic) NSMutableArray *contatos;
+
 - (IBAction)pegaDadosDoFormulario:(id)sender;
 - (IBAction)proximoCampo:(UITextField*)campoAtual;
 

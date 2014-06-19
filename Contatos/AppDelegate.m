@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "FormularioContatoViewController.h"
+#import "ListaContatosViewController.h"
 
 @implementation AppDelegate
 
@@ -16,8 +17,12 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
-    FormularioContatoViewController *form = [[FormularioContatoViewController alloc] init];
-    self.window.rootViewController = form;
+    //FormularioContatoViewController *form = [[FormularioContatoViewController alloc] init];
+    //self.window.rootViewController = form;
+    
+    ListaContatosViewController *lista = [[ListaContatosViewController alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:lista];
+    self.window.rootViewController = nav;
 
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
