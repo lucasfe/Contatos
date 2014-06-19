@@ -50,6 +50,19 @@
     contato.nome = self.nome.text;
     contato.email = self.email.text;
     //NSLog(@"Contato adicionado: %@", (NSString*)[contato objectForKey: @"nome"]);
-    NSLog(@"Contato adicionado: %@", contato.description);
+    NSLog(@"Contato adicionado: %@", contato.description);    
+}
+
+- (IBAction)proximoCampo:(UITextField*)campoAtual {
+
+    NSInteger proximaTag = campoAtual.tag + 1;
+    UIResponder* proximoCampo =   [self.view viewWithTag:proximaTag];
+    
+    if (proximoCampo != nil) {
+        [proximoCampo becomeFirstResponder];
+    }
+    else {
+        [campoAtual resignFirstResponder];
+    }
 }
 @end
