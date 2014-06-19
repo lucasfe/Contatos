@@ -20,6 +20,9 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.contatos = [[NSMutableArray alloc] init];
+        self.navigationItem.title=@"Cadastro";
+        UIBarButtonItem* btn = [[UIBarButtonItem alloc] initWithTitle:@"Adicionar" style:UIBarButtonItemStylePlain target:self action:@selector(pegaDadosDoFormulario:)];
+        self.navigationItem.rightBarButtonItem = btn;
     }
     return self;
 }
@@ -49,11 +52,16 @@
     Contato *contato = [[Contato alloc] init];
     contato.nome = self.nome.text;
     contato.email = self.email.text;
+    contato.telefone = self.telefone.text;
+    contato.endereco = self.endereco.text;
+    contato.site = self.site.text;
     //NSLog(@"Contato adicionado: %@", (NSString*)[contato objectForKey: @"nome"]);
     
     
     [self.contatos addObject:contato];
     NSLog(@"Contatos Array: %@", self.contatos);
+    [self.navigationController popViewControllerAnimated:YES];
+    
 }
 
 - (IBAction)proximoCampo:(UITextField*)campoAtual {

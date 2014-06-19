@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "FormularioContatoViewController.h"
 
 @interface ListaContatosViewController : UITableViewController
 
