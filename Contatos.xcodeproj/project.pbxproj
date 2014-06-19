@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C2825E71952698F004EDD70 /* Contato.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2825E61952698F004EDD70 /* Contato.m */; };
 		6CF385E21952515900C92AB5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CF385E11952515900C92AB5 /* Foundation.framework */; };
 		6CF385E41952515900C92AB5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CF385E31952515900C92AB5 /* CoreGraphics.framework */; };
 		6CF385E61952515900C92AB5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CF385E51952515900C92AB5 /* UIKit.framework */; };
@@ -19,6 +20,8 @@
 		6CF385FD1952515900C92AB5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CF385E51952515900C92AB5 /* UIKit.framework */; };
 		6CF386051952515900C92AB5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6CF386031952515900C92AB5 /* InfoPlist.strings */; };
 		6CF386071952515900C92AB5 /* ContatosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF386061952515900C92AB5 /* ContatosTests.m */; };
+		6CF38613195252E300C92AB5 /* FormularioContatoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF38611195252E300C92AB5 /* FormularioContatoViewController.m */; };
+		6CF38614195252E300C92AB5 /* FormularioContatoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CF38612195252E300C92AB5 /* FormularioContatoViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6C2825E51952698F004EDD70 /* Contato.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Contato.h; path = ../Contato.h; sourceTree = "<group>"; };
+		6C2825E61952698F004EDD70 /* Contato.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Contato.m; path = ../Contato.m; sourceTree = "<group>"; };
 		6CF385DE1952515900C92AB5 /* Contatos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Contatos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CF385E11952515900C92AB5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6CF385E31952515900C92AB5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -48,6 +53,9 @@
 		6CF386021952515900C92AB5 /* ContatosTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ContatosTests-Info.plist"; sourceTree = "<group>"; };
 		6CF386041952515900C92AB5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6CF386061952515900C92AB5 /* ContatosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContatosTests.m; sourceTree = "<group>"; };
+		6CF38610195252E300C92AB5 /* FormularioContatoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormularioContatoViewController.h; sourceTree = "<group>"; };
+		6CF38611195252E300C92AB5 /* FormularioContatoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormularioContatoViewController.m; sourceTree = "<group>"; };
+		6CF38612195252E300C92AB5 /* FormularioContatoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FormularioContatoViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,8 +115,13 @@
 		6CF385E71952515900C92AB5 /* Contatos */ = {
 			isa = PBXGroup;
 			children = (
+				6C2825E51952698F004EDD70 /* Contato.h */,
+				6C2825E61952698F004EDD70 /* Contato.m */,
 				6CF385F01952515900C92AB5 /* AppDelegate.h */,
 				6CF385F11952515900C92AB5 /* AppDelegate.m */,
+				6CF38610195252E300C92AB5 /* FormularioContatoViewController.h */,
+				6CF38611195252E300C92AB5 /* FormularioContatoViewController.m */,
+				6CF38612195252E300C92AB5 /* FormularioContatoViewController.xib */,
 				6CF385F31952515900C92AB5 /* Images.xcassets */,
 				6CF385E81952515900C92AB5 /* Supporting Files */,
 			);
@@ -220,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6CF385EC1952515900C92AB5 /* InfoPlist.strings in Resources */,
+				6CF38614195252E300C92AB5 /* FormularioContatoViewController.xib in Resources */,
 				6CF385F41952515900C92AB5 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -239,8 +253,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C2825E71952698F004EDD70 /* Contato.m in Sources */,
 				6CF385F21952515900C92AB5 /* AppDelegate.m in Sources */,
 				6CF385EE1952515900C92AB5 /* main.m in Sources */,
+				6CF38613195252E300C92AB5 /* FormularioContatoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,6 +377,7 @@
 				GCC_PREFIX_HEADER = "Contatos/Contatos-Prefix.pch";
 				INFOPLIST_FILE = "Contatos/Contatos-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -374,6 +391,7 @@
 				GCC_PREFIX_HEADER = "Contatos/Contatos-Prefix.pch";
 				INFOPLIST_FILE = "Contatos/Contatos-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -437,6 +455,7 @@
 				6CF3860C1952515900C92AB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6CF3860D1952515900C92AB5 /* Build configuration list for PBXNativeTarget "ContatosTests" */ = {
 			isa = XCConfigurationList;
@@ -445,6 +464,7 @@
 				6CF3860F1952515900C92AB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
