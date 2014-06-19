@@ -48,7 +48,8 @@
     
     Contato *contato = [[Contato alloc] init];
     contato.nome = self.nome.text;
+    contato.email = self.email.text;
     //NSLog(@"Contato adicionado: %@", (NSString*)[contato objectForKey: @"nome"]);
-    NSLog(@"Contato adicionado: %@", contato.nome);
+    NSLog(@"Contato adicionado: %@", contato.description);
 }
 @end

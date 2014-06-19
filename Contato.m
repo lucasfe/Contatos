@@ -10,5 +10,9 @@
 
 @implementation Contato
 
+-(NSString*)description {
+
+    return [NSString stringWithFormat: @"%@ < %@ >", self.nome, self.email];
+}
 
 @end
