@@ -43,9 +43,12 @@
 
 -(UITableViewCell*) tableView:(UITableView*) tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell* cell;
+    static NSString *pool = @"pool";
+    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:pool];
     
-    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:nil];
+    if(!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:pool];
+    }
     
     Contato* contato = self.contatos[indexPath.row];
     cell.textLabel.text = contato.nome;
