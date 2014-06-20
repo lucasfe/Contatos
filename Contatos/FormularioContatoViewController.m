@@ -7,7 +7,6 @@
 //
 
 #import "FormularioContatoViewController.h"
-#import "Contato.h"
 
 @interface FormularioContatoViewController ()
 
@@ -21,7 +20,7 @@
     if (self) {
         self.contatos = [[NSMutableArray alloc] init];
         self.navigationItem.title=@"Cadastro";
-        UIBarButtonItem* btn = [[UIBarButtonItem alloc] initWithTitle:@"Adicionar" style:UIBarButtonItemStylePlain target:self action:@selector(pegaDadosDoFormulario:)];
+        UIBarButtonItem* btn = [[UIBarButtonItem alloc] initWithTitle:@"Adicionar" style:UIBarButtonItemStylePlain target:self action:@selector(criaContato:)];
         self.navigationItem.rightBarButtonItem = btn;
     }
     return self;
@@ -39,7 +38,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)pegaDadosDoFormulario:(id)sender {
+- (Contato*)pegaDadosDoFormulario {
     
 //    NSMutableDictionary *contato =[[NSMutableDictionary alloc] init ];
 //    [contato setObject: self.nome.text forKey:@"nome"];
@@ -55,12 +54,21 @@
     contato.telefone = self.telefone.text;
     contato.endereco = self.endereco.text;
     contato.site = self.site.text;
+    
+    return contato;
     //NSLog(@"Contato adicionado: %@", (NSString*)[contato objectForKey: @"nome"]);
     
     
+}
+
+
+-(void)criaContato {
+
+    Contato *contato = [self pegaDadosDoFormulario];
     [self.contatos addObject:contato];
     NSLog(@"Contatos Array: %@", self.contatos);
     [self.navigationController popViewControllerAnimated:YES];
+
     
 }
 
