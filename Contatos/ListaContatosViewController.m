@@ -31,4 +31,33 @@
     
 }
 
+-(NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {
+
+    return 1;
+}
+
+-(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+
+    return [self.contatos count];
+}
+
+-(UITableViewCell*) tableView:(UITableView*) tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UITableViewCell* cell;
+    
+    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:nil];
+    
+    Contato* contato = self.contatos[indexPath.row];
+    cell.textLabel.text = contato.nome;
+    cell.detailTextLabel.text = contato.email;
+    
+    return cell;
+}
+
+-(void) viewWillAppear:(BOOL)animated {
+
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
+}
+
 @end
