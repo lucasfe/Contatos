@@ -19,8 +19,12 @@
     
     //FormularioContatoViewController *form = [[FormularioContatoViewController alloc] init];
     //self.window.rootViewController = form;
-    
+
+    self.contatos = [[NSMutableArray alloc] init];
+
     ListaContatosViewController *lista = [[ListaContatosViewController alloc] init];
+    lista.contatos = self.contatos;
+    
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:lista];
     self.window.rootViewController = nav;
 

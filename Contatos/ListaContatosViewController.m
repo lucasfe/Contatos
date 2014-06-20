@@ -24,6 +24,8 @@
 -(void)exibeForm:(id)sender {
 
     FormularioContatoViewController* form = [[FormularioContatoViewController alloc] init];
+    form.contatos = self.contatos;
+    
     [self.navigationController pushViewController:form animated:YES];
     //[self presentViewController:form animated:YES completion:nil];
     

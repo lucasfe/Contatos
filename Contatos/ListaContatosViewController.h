@@ -11,4 +11,6 @@
 
 @interface ListaContatosViewController : UITableViewController
 
+@property (weak, atomic) NSMutableArray *contatos;
+
 @end
