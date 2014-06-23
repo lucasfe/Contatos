@@ -25,10 +25,25 @@
     return self;
 }
 
+-(id)initWithContato:(Contato *)umContato {
+    
+    self = [super init];
+    if(self) {
+        self.contato = umContato;
+    }
+    return self;
+}
+
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    if (self.contato) {
+        self.nome.text = self.contato.nome;
+        self.telefone.text = self.contato.telefone;
+        self.email.text = self.contato.email;
+        self.endereco.text = self.contato.endereco;
+        self.site.text = self.contato.site;
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning

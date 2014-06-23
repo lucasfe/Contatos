@@ -16,11 +16,13 @@
 @property (weak, nonatomic) IBOutlet UITextField *telefone;
 @property (weak, nonatomic) IBOutlet UITextField *nome;
 
+@property (strong) Contato *contato;
 @property (weak, atomic) NSMutableArray *contatos;
 
 - (Contato*)pegaDadosDoFormulario;
 - (IBAction)proximoCampo:(UITextField*)campoAtual;
 - (void)criaContato;
+-(id) initWithContato:(Contato *)umContato;
 
 
 

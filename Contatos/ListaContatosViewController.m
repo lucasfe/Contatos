@@ -23,6 +23,8 @@
 }
 
 
+
+
 -(void)exibeForm:(id)sender {
 
     FormularioContatoViewController* form = [[FormularioContatoViewController alloc] init];
@@ -65,12 +67,24 @@
     [self.tableView reloadData];
 }
 
+
 -(void)tableView:(UITableView *)tableView
 commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         [self.contatos removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }
+}
+
+-(void) tableView:(UITableView *) tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    Contato* contato = self.contatos[indexPath.row];
+    FormularioContatoViewController *form = [[FormularioContatoViewController alloc] initWithContato:contato];
+    form.contatos = self.contatos;
+    
+    [self.navigationController pushViewController:form animated:YES];
+    
+    NSLog(@"Contato selecionado: %@", contato.nome);
 }
 
 @end
