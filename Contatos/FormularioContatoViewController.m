@@ -30,6 +30,8 @@
     self = [super init];
     if(self) {
         self.contato = umContato;
+        UIBarButtonItem *confirmar = [[UIBarButtonItem alloc] initWithTitle:@"Confirmar" style:UIBarButtonItemStylePlain target:self action:@selector(atualizaContato)];
+        self.navigationItem.rightBarButtonItem = confirmar;
     }
     return self;
 }
@@ -61,29 +63,31 @@
 //    [contato setObject: self.endereco.text forKey:@"endereco"];
 //    [contato setObject: self.site.text forKey:@"site"];
     
+    if(!self.contato) {
+        self.contato = [[Contato alloc] init];
+    }
+
+    self.contato.nome = self.nome.text;
+    self.contato.email = self.email.text;
+    self.contato.telefone = self.telefone.text;
+    self.contato.endereco = self.endereco.text;
+    self.contato.site = self.site.text;
     
-    Contato *contato = [[Contato alloc] init];
-    contato.nome = self.nome.text;
-    contato.email = self.email.text;
-    contato.telefone = self.telefone.text;
-    contato.endereco = self.endereco.text;
-    contato.site = self.site.text;
-    
-    return contato;
+    return self.contato;
     //NSLog(@"Contato adicionado: %@", (NSString*)[contato objectForKey: @"nome"]);
     
     
 }
 
-
 -(void)criaContato {
-
-    Contato *contato = [self pegaDadosDoFormulario];
-    [self.contatos addObject:contato];
-    NSLog(@"Contatos Array: %@", self.contatos);
+    [self.contatos addObject:[self pegaDadosDoFormulario]];
     [self.navigationController popViewControllerAnimated:YES];
+}
 
-    
+-(void) atualizaContato {
+
+    [self pegaDadosDoFormulario];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction)proximoCampo:(UITextField*)campoAtual {
