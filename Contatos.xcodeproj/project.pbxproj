@@ -23,6 +23,7 @@
 		6CF386071952515900C92AB5 /* ContatosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF386061952515900C92AB5 /* ContatosTests.m */; };
 		6CF38613195252E300C92AB5 /* FormularioContatoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF38611195252E300C92AB5 /* FormularioContatoViewController.m */; };
 		6CF38614195252E300C92AB5 /* FormularioContatoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CF38612195252E300C92AB5 /* FormularioContatoViewController.xib */; };
+		A091453619579F290008E400 /* contato.plist in Resources */ = {isa = PBXBuildFile; fileRef = A091453519579F290008E400 /* contato.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		6CF38610195252E300C92AB5 /* FormularioContatoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormularioContatoViewController.h; sourceTree = "<group>"; };
 		6CF38611195252E300C92AB5 /* FormularioContatoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormularioContatoViewController.m; sourceTree = "<group>"; };
 		6CF38612195252E300C92AB5 /* FormularioContatoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FormularioContatoViewController.xib; sourceTree = "<group>"; };
+		A091453519579F290008E400 /* contato.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = contato.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 				6CF385F11952515900C92AB5 /* AppDelegate.m */,
 				6CF38610195252E300C92AB5 /* FormularioContatoViewController.h */,
 				6CF38611195252E300C92AB5 /* FormularioContatoViewController.m */,
+				A091453519579F290008E400 /* contato.plist */,
 				6CF38612195252E300C92AB5 /* FormularioContatoViewController.xib */,
 				6CEA195919539EE300DF447B /* ListaContatosViewController.h */,
 				6CEA195A19539EE300DF447B /* ListaContatosViewController.m */,
@@ -240,6 +243,7 @@
 				6CF385EC1952515900C92AB5 /* InfoPlist.strings in Resources */,
 				6CF38614195252E300C92AB5 /* FormularioContatoViewController.xib in Resources */,
 				6CF385F41952515900C92AB5 /* Images.xcassets in Resources */,
+				A091453619579F290008E400 /* contato.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

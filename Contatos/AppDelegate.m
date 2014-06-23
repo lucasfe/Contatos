@@ -20,8 +20,16 @@
     //FormularioContatoViewController *form = [[FormularioContatoViewController alloc] init];
     //self.window.rootViewController = form;
 
-    self.contatos = [[NSMutableArray alloc] init];
 
+    NSArray *userDirs = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,  NSUserDomainMask, YES);
+    NSString *documentDir = userDirs[0];
+    self.arquivoContatos = [NSString stringWithFormat:@"%@/ArquivoContatos", documentDir];
+    
+    self.contatos = [NSKeyedUnarchiver unarchiveObjectWithFile:self.arquivoContatos];
+    if (!self.contatos) {
+        self.contatos = [[NSMutableArray alloc] init];
+    }
+    
     ListaContatosViewController *lista = [[ListaContatosViewController alloc] init];
     lista.contatos = self.contatos;
     
@@ -43,6 +51,8 @@
 {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+
+    [NSKeyedArchiver archiveRootObject:self.contatos toFile:self.arquivoContatos];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
