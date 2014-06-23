@@ -16,6 +16,8 @@
         self.title = @"Contatos";
         UIBarButtonItem *btn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(exibeForm:)];
         self.navigationItem.rightBarButtonItem = btn;
+        self.navigationItem.leftBarButtonItem = self.editButtonItem;
+
     }
     return self;
 }
@@ -61,6 +63,14 @@
 
     [super viewWillAppear:animated];
     [self.tableView reloadData];
+}
+
+-(void)tableView:(UITableView *)tableView
+commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [self.contatos removeObjectAtIndex:indexPath.row];
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }
 }
 
 @end
