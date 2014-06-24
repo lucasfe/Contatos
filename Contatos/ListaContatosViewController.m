@@ -7,6 +7,7 @@
 //
 
 #import "ListaContatosViewController.h"
+#import "FormularioContatoViewController.h"
 
 @implementation ListaContatosViewController
 
@@ -28,11 +29,15 @@
 -(void)exibeForm:(id)sender {
 
     FormularioContatoViewController* form = [[FormularioContatoViewController alloc] init];
-    form.contatos = self.contatos;
+    form.delegate = self;
     
     [self.navigationController pushViewController:form animated:YES];
     //[self presentViewController:form animated:YES completion:nil];
     
+}
+
+-(void)contatoAdicionado:(Contato*)contato {
+    [self.contatos addObject:contato];
 }
 
 -(NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {
@@ -80,7 +85,7 @@ commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(
 
     Contato* contato = self.contatos[indexPath.row];
     FormularioContatoViewController *form = [[FormularioContatoViewController alloc] initWithContato:contato];
-    form.contatos = self.contatos;
+    //form.contatos = self.contatos;
     
     [self.navigationController pushViewController:form animated:YES];
     

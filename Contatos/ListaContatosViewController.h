@@ -9,9 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "FormularioContatoViewController.h"
 
-@interface ListaContatosViewController : UITableViewController
+@interface ListaContatosViewController : UITableViewController <FormularioContatoViewControllerDelegate>
 
 @property (weak, atomic) NSMutableArray *contatos;
 
+
+-(void)contatoAdicionado:(Contato*)contato;
 
 @end

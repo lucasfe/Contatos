@@ -80,7 +80,9 @@
 }
 
 -(void)criaContato {
-    [self.contatos addObject:[self pegaDadosDoFormulario]];
+//    [self.contatos addObject:[self pegaDadosDoFormulario]];
+    [self.delegate contatoAdicionado:[self pegaDadosDoFormulario]];
+    
     [self.navigationController popViewControllerAnimated:YES];
 }
 
