@@ -8,12 +8,22 @@
 
 #import <Foundation/Foundation.h>
 #import "FormularioContatoViewController.h"
+#import <MessageUI/MessageUI.h>
 
-@interface ListaContatosViewController : UITableViewController <FormularioContatoViewControllerDelegate>
+@interface ListaContatosViewController : UITableViewController <FormularioContatoViewControllerDelegate, UIActionSheetDelegate, MFMailComposeViewControllerDelegate> {
+
+    Contato * contatoSelecionado;
+
+}
+
 
 @property (weak, atomic) NSMutableArray *contatos;
 
+@property (atomic) NSInteger linhaSelecionada;
 
 -(void)contatoAdicionado:(Contato*)contato;
+-(void)contatoAlterado:(Contato *)contato;
+
+-(void)exibeMaisAcoes:(UILongPressGestureRecognizer *) gestureRecognizer;
 
 @end

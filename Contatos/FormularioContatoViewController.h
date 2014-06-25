@@ -13,6 +13,9 @@
 
 -(void)contatoAdicionado:(Contato*)contato;
 
+@optional
+-(void)contatoAlterado:(Contato*)contato;
+
 @end
 
 @interface FormularioContatoViewController : UIViewController

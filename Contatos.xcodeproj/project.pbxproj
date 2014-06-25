@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6C2825E71952698F004EDD70 /* Contato.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2825E61952698F004EDD70 /* Contato.m */; };
+		6C31E8A8195A598000AABACE /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C31E8A7195A598000AABACE /* MessageUI.framework */; };
 		6CEA195B19539EE300DF447B /* ListaContatosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEA195A19539EE300DF447B /* ListaContatosViewController.m */; };
 		6CF385E21952515900C92AB5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CF385E11952515900C92AB5 /* Foundation.framework */; };
 		6CF385E41952515900C92AB5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CF385E31952515900C92AB5 /* CoreGraphics.framework */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		6C2825E51952698F004EDD70 /* Contato.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Contato.h; path = ../Contato.h; sourceTree = "<group>"; };
 		6C2825E61952698F004EDD70 /* Contato.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Contato.m; path = ../Contato.m; sourceTree = "<group>"; };
+		6C31E8A7195A598000AABACE /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		6CEA195919539EE300DF447B /* ListaContatosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListaContatosViewController.h; sourceTree = "<group>"; };
 		6CEA195A19539EE300DF447B /* ListaContatosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListaContatosViewController.m; sourceTree = "<group>"; };
 		6CF385DE1952515900C92AB5 /* Contatos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Contatos.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C31E8A8195A598000AABACE /* MessageUI.framework in Frameworks */,
 				6CF385E41952515900C92AB5 /* CoreGraphics.framework in Frameworks */,
 				6CF385E61952515900C92AB5 /* UIKit.framework in Frameworks */,
 				6CF385E21952515900C92AB5 /* Foundation.framework in Frameworks */,
@@ -109,6 +112,7 @@
 		6CF385E01952515900C92AB5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6C31E8A7195A598000AABACE /* MessageUI.framework */,
 				6CF385E11952515900C92AB5 /* Foundation.framework */,
 				6CF385E31952515900C92AB5 /* CoreGraphics.framework */,
 				6CF385E51952515900C92AB5 /* UIKit.framework */,

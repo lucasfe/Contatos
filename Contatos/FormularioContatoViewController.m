@@ -80,15 +80,16 @@
 }
 
 -(void)criaContato {
-//    [self.contatos addObject:[self pegaDadosDoFormulario]];
     [self.delegate contatoAdicionado:[self pegaDadosDoFormulario]];
-    
     [self.navigationController popViewControllerAnimated:YES];
 }
 
 -(void) atualizaContato {
 
     [self pegaDadosDoFormulario];
+    if ([self.delegate respondsToSelector:@selector(contatoAlterado:)]) {
+        [self.delegate contatoAlterado:self.contato];
+    }
     [self.navigationController popViewControllerAnimated:YES];
 }
 
